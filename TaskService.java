@@ -23,8 +23,12 @@ public List<Task>getAllStatus(){
 	return taskrepository.findAll();
 }
 
-public Optional<Task>getStatusById(int task){
-	return taskrepository.findById(task);
+//public Optional<Task>getStatusById(int task){
+//	return taskrepository.findById(task);
+//}
+public Optional<Task> getStatusById(int taskId) {
+    Optional<Task> optionalTask = taskrepository.findById(taskId);
+    return optionalTask;
 }
 	
 	
